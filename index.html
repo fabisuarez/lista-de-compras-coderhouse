@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>Menu Jquery</title>
+
+    <!-- CDN Boostrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts   Oswald -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- CDN JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- CDN JQuery Easing -->
+    <script type="text/javascript" src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+
+    <script src="http://www.bitstorm.org/jquery/color-animation/jquery.animate-colors.js"></script>
+
+    <!-- CDN JavaScript Boostrap
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    -->
+
+    </head>
+    <body>
+        <section class="container Contenido">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>Lista de compras</h1>
+                    <div class="col-md-12">
+                        <div class="input-group">
+                          <input id="inputText" type="text" class="form-control" placeholder="Ingresa un producto">
+                          <span class="input-group-btn">
+                            <button id="crearElemento" class="btn btn-primary" type="button">Agregar</button>
+                          </span>
+                        </div><!-- /input-group -->
+                      </div><!-- /.col-lg-6 -->
+                    <div class="col-md-12 Mensaje" id="mensaje">
+                    </div>
+                    <div class="col-md-12">
+                        <ul id="lista" class="Listado">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p>Nombre del producto 1</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button onclick="moverArriba(this)" type="button" class="btn btn-default" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                                        </button>
+                                        <button onclick="moverAbajo(this)" type="button" class="btn btn-default" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                                        </button>
+                                        <button onclick="eliminarElemento(this)" type="button" class="btn btn-default btn-eliminar" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p>Nombre del producto 2</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button onclick="moverArriba(this)" type="button" class="btn btn-default" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                                        </button>
+                                        <button onclick="moverAbajo(this)" type="button" class="btn btn-default" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                                        </button>
+                                        <button onclick="eliminarElemento(this)" type="button" class="btn btn-default btn-eliminar" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p>Nombre del producto 3</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button onclick="moverArriba(this)" type="button" class="btn btn-default" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                                        </button>
+                                        <button onclick="moverAbajo(this)" type="button" class="btn btn-default" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                                        </button>
+                                        <button onclick="eliminarElemento(this)" type="button" class="btn btn-default btn-eliminar" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p>Nombre del producto 4</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button onclick="moverArriba(this)" type="button" class="btn btn-default" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                                        </button>
+                                        <button onclick="moverAbajo(this)" type="button" class="btn btn-default" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                                        </button>
+                                        <button onclick="eliminarElemento(this)" type="button" class="btn btn-default btn-eliminar" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p>Nombre del producto 5</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button onclick="moverArriba(this)" type="button" class="btn btn-default" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                                        </button>
+                                        <button onclick="moverAbajo(this)" type="button" class="btn btn-default" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                                        </button>
+                                        <button onclick="eliminarElemento(this)" type="button" class="btn btn-default btn-eliminar" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p>Nombre del producto 6</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button onclick="moverArriba(this)" type="button" class="btn btn-default" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                                        </button>
+                                        <button onclick="moverAbajo(this)" type="button" class="btn btn-default" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                                        </button>
+                                        <button onclick="eliminarElemento(this)" type="button" class="btn btn-default btn-eliminar" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p>Nombre del producto 7</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button onclick="moverArriba(this)" type="button" class="btn btn-default" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                                        </button>
+                                        <button onclick="moverAbajo(this)" type="button" class="btn btn-default" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                                        </button>
+                                        <button onclick="eliminarElemento(this)" type="button" class="btn btn-default btn-eliminar" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    <script type="text/javascript">
+
+        function moverArriba(item){
+            //console.log($(item).closest("li").attr("id"));
+            //console.log($(item).attr("id"));
+            //$($(item).closest("li")).appendTo("#lista");
+            //$($(item).parents('li').first().appendTo("#lista"));
+             $("#lista li:first").appendTo("#lista");
+        }
+        function moverAbajo(item){
+            //console.log($(item).closest("li").attr("id"));
+            //console.log($(item).attr("id"));
+            //$($(item).closest("li")).prependTo("#lista");
+            $("#lista li:last").prependTo("#lista");
+
+        }
+        function eliminarElemento(item){
+            $($(item).closest("li")).remove();
+            mensaje = $("<div class='alert alert-info' role='alert'>Producto Eliminado</div>");
+            mostrarMensaje(mensaje);
+        }
+
+        function mostrarMensaje(html){
+            $("#mensaje").html(html);
+        }
+
+        $(document).on( "ready", function() {
+
+            $("#crearElemento").on("click", function(){
+                var mensaje = "";
+                if($("#inputText").val()!=""){
+                    var nuevo = $("<li><div class='row''><div class='col-md-8'><p>"+$('#inputText').val()+"</p></div><div class='col-md-4'><button onclick='moverArriba(this)' type='button' class='btn btn-default' aria-label='Left Align'><span class='glyphicon glyphicon glyphicon-arrow-up' aria-hidden='true'></span></button> <button onclick='moverAbajo(this)' type='button' class='btn btn-default' aria-label='Left Align'><span class='glyphicon glyphicon glyphicon-arrow-down' aria-hidden='true'></span></button> <button onclick='eliminarElemento(this)' type='button' class='btn btn-default btn-eliminar' aria-label='Left Align'><span class='glyphicon glyphicon glyphicon-trash' aria-hidden='true'></span></button></div></div></li>");
+                    $(nuevo).prependTo("#lista");
+                    $("#inputText").val("");
+                    mensaje = $("<div class='alert alert-success' role='alert'>Producto Agregado</div>");
+                }else{
+                    mensaje = $("<div class='alert alert-danger' role='alert'>Ingrese el nombre del producto</div>");
+                }
+                mostrarMensaje(mensaje);
+            });
+        });
+    </script>
+</html>
